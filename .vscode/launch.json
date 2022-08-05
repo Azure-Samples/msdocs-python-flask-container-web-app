@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "Docker: Python (MongoDB Azure)",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug (MongoDB Azure)",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}",
+                        "remoteRoot": "/app/azureproject"
+                    }
+                ],
+                "projectType": "flask"
+            }
+        },
+        {
+            "name": "Docker: Python - (MongoDB local)",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug (MongoDB local)",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}",
+                        "remoteRoot": "/app/azureproject"
+                    }
+                ],
+                "projectType": "flask"
+            }
+        }
+    ]
+}

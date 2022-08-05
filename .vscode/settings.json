@@ -1,0 +1,34 @@
+/*
+More than one label/template object defined for docker.commands._____  means that user can choose which one to use.
+*/
+{
+    "docker.commands.runInteractive":[
+        {
+            "label": "Interactive run configuration (default, no MongoDB)",
+            "template": "${config:docker.dockerPath} run --rm -it ${exposedPorts} ${tag}"
+        },
+        {
+            "label": "Interactive run configuration (MongoDB local)",
+            "template": "${config:docker.dockerPath} run --rm -it --add-host mongoservice:<YOUR_IP_ADDRESS> -p 5000:5000 -p 27017:27017  -e 'CONNECTION_STRING=mongodb://mongoservice:27017' -e 'DB_NAME=restaurants_reviews' -e 'COLLECTION_NAME=restaurants_reviews' ${tag}"
+        },
+        {
+            "label": "Interactive run configuration (MongoDB Azure)",
+            "template": "${config:docker.dockerPath} run --rm -it ${exposedPorts}  -e 'CONNECTION_STRING=<CONNECTION_STRING>' -e 'DB_NAME=restaurants_reviews' -e 'COLLECTION_NAME=restaurants_reviews' ${tag}"
+        }
+
+    ],
+    "docker.commands.run": [
+        {
+        "label": "Run configuration (default, no MongoDB)",
+        "template": "${config:docker.dockerPath} run --rm -d ${exposedPorts} ${tag}"
+        },
+        {
+            "label": "Run configuration (MongoDB local)",
+            "template": "${config:docker.dockerPath} run --rm -d --add-host mongoservice:<YOUR_IP_ADDRESS> -p 5000:5000 -p 27017:27017  -e 'CONNECTION_STRING=mongodb://mongoservice:27017' -e 'DB_NAME=restaurants_reviews' -e 'COLLECTION_NAME=restaurants_reviews' ${tag}"
+        },
+        {
+            "label": "Run configuration (MongoDB Azure)",
+            "template": "${config:docker.dockerPath} run --rm -d ${exposedPorts} -e 'CONNECTION_STRING=<CONNECTION_STRING>' -e 'DB_NAME=restaurants_reviews' -e 'COLLECTION_NAME=restaurants_reviews' ${tag}"
+        }
+    ]
+}
