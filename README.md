@@ -16,7 +16,7 @@ Here are some ways you can run the sample web app in this repository.
 | ----------- | ----------- | ----------|
 | Local environment | Run repo code in virtual environment with *requirements.txt*. Set environment variables in shell before running. | Build image from repo and run locally in Docker container. Pass environment variables in Docker CLI command or with VS Code task definition <sup>1<sup>. |
 | Azure App Service [Web App for Containers](https://azure.microsoft.com/services/app-service/containers/) | Deploy repo code to App service. Set environment variables as App Service configuration settings. See note about subpath. <sup>2</sup> | Build image locally or in Azure and push to container registry like Azure Container Registry. Configure App Service to pull from registry. Set environment variables as App Service configuration settings. |
-| [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview) | *n/a* |  Build image locally or in Azure and push to container registry like Azure Container Registry. Create a Container App with deployment from the registry. Configure environment variables for the container. |
+| [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview) | &nbsp; |  Build image locally or in Azure and push to container registry like Azure Container Registry. Create a Container App with deployment from the registry. Configure environment variables for the container. |
 
 (1) The *.vscode* directory *settings.json* and *tasks.json* are configured either for a MongoDB local connection or an Azure Cosmos DB connection. The tasks and templates in *.vscode* are only used when using Visual Studio Code locally.
 
