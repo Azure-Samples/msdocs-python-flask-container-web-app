@@ -2,7 +2,7 @@
 
 This Python web app is a restaurant review application using the [Flask](https://flask.palletsprojects.com/en/2.2.x/) framework. The app is intended to be used as a container running on Azure App Service with a connection to an Azure Cosmos DB API for MongoDB. 
 
-Following the tutorial [TBD: coming soon](TBD), you can deploy this web app Azure, hosted in a fully managed Azure App Service. Azure managed identity enables the App Service to pull container images from an Azure Container Registry. MongoDB connection info is passed to the code through environment variables. 
+Following the tutorial [Tutorial: coming soon](TBD), you can deploy this web app Azure, hosted in a fully managed Azure App Service. Azure managed identity enables the App Service to pull container images from an Azure Container Registry. MongoDB connection info is passed to the code through environment variables. 
 
 If you need an Azure account, you can [create on for free](https://azure.microsoft.com/free/).
 
@@ -14,8 +14,8 @@ Here are some ways you can run the sample web app in this repository.
 
 | Scenario | As-is repo code        | Containerized app |
 | ----------- | ----------- | ----------|
-| Local environment | Run repo code in virtual environment with *requirements.txt*. Set environment variables in shell before running. | Build image from repo and run locally in Docker container. Pass environment variables in Docker CLI command or with VS Code task definition <sup>1<sup>. |
-| Azure App Service [Web App for Containers](https://azure.microsoft.com/services/app-service/containers/) | Deploy repo code to App service. Set environment variables as App Service configuration settings. See note about subpath. <sup>2</sup> | Build image locally or in Azure and push to container registry like Azure Container Registry. Configure App Service to pull from registry. Set environment variables as App Service configuration settings. |
+| Local environment | Run repo code in virtual environment with *requirements.txt*. Set environment variables in shell before running. For an example, see [Configure a Python virtual environment](https://docs.microsoft.com/azure/developer/python/configure-local-development-environment#configure-python-virtual-environment). | Build image from repo and run locally in Docker container. Pass environment variables in Docker CLI command or with VS Code task definition <sup>1</sup>. This scenario is covered in [Tutorial: coming soon](TBD). |
+| Azure App Service | Deploy repo code to App service. Set environment variables as App Service configuration settings. See note about subpath. <sup>2</sup> | Deploy container to [Web App for Containers](https://azure.microsoft.com/services/app-service/containers/). Build image locally or in Azure and push to container registry like Azure Container Registry. Configure App Service to pull from registry. Set environment variables as App Service configuration settings. This scenario is covered in [Tutorial: coming soon](TBD).|
 | [Azure Container Apps](https://docs.microsoft.com/azure/container-apps/overview) | &nbsp; |  Build image locally or in Azure and push to container registry like Azure Container Registry. Create a Container App with deployment from the registry. Configure environment variables for the container. |
 
 (1) The *.vscode* directory *settings.json* and *tasks.json* are configured either for a MongoDB local connection or an Azure Cosmos DB connection. The tasks and templates in *.vscode* are only used when using Visual Studio Code locally.
@@ -30,7 +30,7 @@ Here are some ways you can run the sample web app in this repository.
 
 ## Environment variables
 
-The Web App for Containers scenario is covered in the tutorial [TBD: coming soon](TBD).
+The Web App for Containers scenario is covered in the tutorial [Tutorial: coming soon](TBD).
 
 The sample code requires the following environment variables passed in as described in the scenario table above.
 
